@@ -49,10 +49,8 @@ class MyTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
+
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/jayeshdalal/PycharmProjects/AutomationPythonDetails/com/Reports'), verbosity=2)
-=======
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/jayeshdalal/PycharmProjects/AutomationPythonDetails/com/Reports'),verbosity=2)
->>>>>>> origin/master
+
 
 
