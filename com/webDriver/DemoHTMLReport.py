@@ -37,6 +37,11 @@ class MyTestCase(unittest.TestCase):
         title = self.driver.title
         self.assertEqual(title, "automation step by step - Google Search")
 
+    @unittest.skip("This is a skipped test.")
+    def test_skip(self):
+        """ This test should be skipped. """
+        pass
+
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
@@ -44,4 +49,6 @@ class MyTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/jayeshdalal/PycharmProjects/AutomationPythonDetails/com/Reports'),verbosity=2)
+
+
