@@ -3,6 +3,10 @@
 import unittest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), "....", "...."))
+
 from com.POMDemo.Pages.LoginPages import LoginPage
 from com.POMDemo.Pages.HomePages import HomePage
 import HtmlTestRunner
@@ -43,4 +47,9 @@ if __name__ == '__main__':
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/jayeshdalal/PycharmProjects/AutomationPythonDetails/com/Reports', verbosity=2))
 
 
+'''
+via command promat and run the test and genrated the reports.
+python -m com.POMDemo.Tests.LoginTest
+
+'''
 
