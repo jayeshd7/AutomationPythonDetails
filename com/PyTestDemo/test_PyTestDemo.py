@@ -26,7 +26,12 @@ class PyTestDemo():
         driver.close()
         driver.quit()
 
+'''
 
+pytest report genration 
+
+
+'''
 
 
 
