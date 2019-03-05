@@ -9,9 +9,7 @@ class PyTestDemo():
             driver = webdriver.Chrome(ChromeDriverManager().install())
             driver.implicitly_wait(10)
             driver.maximize_window()
-            yield
-            driver.close()
-            driver.quit()
+
 
     def test_openOrangeUrl(self, test_setup):
         driver.get("https://opensource-demo.orangehrmlive.com/")
@@ -21,12 +19,13 @@ class PyTestDemo():
         driver.find_element_by_xpath("//input[@id='btnLogin']").click()
         title = driver.title
         assert title == "OrangeHRM"
-    '''
+
     @pytest.yield_fixture()
-    def test_tearDown():
+
+    def test_tearDown(self):
         driver.close()
         driver.quit()
-    '''
+
 
 
 
