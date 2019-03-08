@@ -9,7 +9,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "....", "...."))
 
 from com.POMDemo.Pages.LoginPages import LoginPage
 from com.POMDemo.Pages.HomePages import HomePage
-import HtmlTestRunner
+from com.POMDemo.utils import utils as utils
+
 
 
 class LoginTestCase(unittest.TestCase):
@@ -22,10 +23,10 @@ class LoginTestCase(unittest.TestCase):
 
     def test_openOrangeUrl(self):
         driver = self.driver
-        driver.get("https://opensource-demo.orangehrmlive.com/")
+        driver.get(utils.URL)
         login = LoginPage(driver)
-        login.enter_username("Admin")
-        login.enter_password("admin123")
+        login.enter_username(utils.userName)
+        login.enter_password(utils.password)
         login.submit_login()
 
         homepage = HomePage(driver)
@@ -44,7 +45,7 @@ class LoginTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/jayeshdalal/PycharmProjects/AutomationPythonDetails/com/Reports', verbosity=2))
+    unittest.main(verbosity=2)
 
 
 '''

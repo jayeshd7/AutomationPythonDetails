@@ -9,8 +9,9 @@ class PyTestDemo():
             driver = webdriver.Chrome(ChromeDriverManager().install())
             driver.implicitly_wait(10)
             driver.maximize_window()
-
-
+            yield
+            driver.close()
+            driver.quit()
     def test_openOrangeUrl(self, test_setup):
         driver.get("https://opensource-demo.orangehrmlive.com/")
         driver.find_element_by_xpath("//input[@id='txtUsername']").send_keys("Admin")
@@ -19,20 +20,14 @@ class PyTestDemo():
         driver.find_element_by_xpath("//input[@id='btnLogin']").click()
         title = driver.title
         assert title == "OrangeHRM"
-
-    @pytest.yield_fixture()
-
-    def test_tearDown(self):
-        driver.close()
-        driver.quit()
-
 '''
 
 pytest report genration 
 
+pytest --html=report.html --self-contained-html
+
 
 '''
-
 
 
 
