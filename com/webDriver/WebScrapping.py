@@ -3,8 +3,21 @@ import requests
 import bs4
 import pandas as pd
 import numpy as np
+import tensorflow as tf
+import sklearn
+import moment
 
-print(np.__version__version)
+x = moment.now()
+y = moment.date("12-18-2012", "%m-%d-%Y")
+
+print(x)
+print(y)
+
+
+print(sklearn)
+print(tf.__version__)
+
+
 
 
 
@@ -30,6 +43,9 @@ for link in links:
     print("--------------")
     print(link.get(0))
     print(link.get('href'))
+
+
+print(tf.__version__)
 
 
 #print(links.count())
