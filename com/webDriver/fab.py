@@ -25,5 +25,5 @@ def fab(n):
             b = c
             print(c)
 
-fab(0)
+fab(10)
 

@@ -4,6 +4,7 @@ import pytest
 
 class PyTestDemo():
     @pytest.fixture()
+    @pytest.mark.xfail
     def test_setup(self):
             global driver
             driver = webdriver.Chrome(ChromeDriverManager().install())

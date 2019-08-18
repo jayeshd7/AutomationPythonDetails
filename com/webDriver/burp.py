@@ -8,7 +8,6 @@ host = 'http://localhost:8080'
 #
 
 bi = burpscanner.BurpApi(host)
-bi.
 
 # Add target in burp scope
 
